@@ -1,0 +1,13 @@
+# cache base64 generowany przez src/build.sh
+src/.b64/
+src/.keys.txt
+src/.raw.html
+src/.body.html
+src/.imgmap.js
+
+# stara wersja podgladu, teraz generowana w locie przez serve.js
+preview.html
+
+node_modules/
+.DS_Store
+Thumbs.db

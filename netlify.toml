@@ -1,0 +1,18 @@
+# Makieta jest statyczna i zbudowana wczesniej, wiec Netlify niczego nie kompiluje.
+# Publikowany jest katalog glowny repozytorium, w ktorym lezy index.html.
+
+[build]
+  publish = "."
+
+# Kazda sciezka zwraca index.html. Nawigacja dziala na hashu, wiec serwer
+# i tak widzi tylko "/", ale to zabezpiecza przed 404 po wejsciu z linku.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
